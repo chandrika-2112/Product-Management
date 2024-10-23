@@ -42,11 +42,11 @@ The following APIs are available in this system:
 
  **Endpoint**: `/allProducts`
 
-#### **Method**: `GET`
+ **Method**: `GET`
 
-#### **Description**: Retrieves a list of all products available in the system.
+**Description**: Retrieves a list of all products available in the system.
 
-#### **Response**:
+ **Response**:
 
 ```json
 [
@@ -69,13 +69,13 @@ The following APIs are available in this system:
 
 ### API 2: Create a New Product
 
-#### **Endpoint**: `/save`
+ **Endpoint**: `/save`
 
-#### **Method**: `POST`
+ **Method**: `POST`
 
-#### **Description**: Adds a new product to the system. The `pid` is auto-incremented.
+ **Description**: Adds a new product to the system. The `pid` is auto-incremented.
 
-#### **Request**:
+ **Request**:
 
 ```json
 {
@@ -88,7 +88,7 @@ The following APIs are available in this system:
 }
 ```
 
-#### **Response**:
+ **Response**:
 
 ```json
 {
@@ -109,13 +109,13 @@ The following APIs are available in this system:
 
 ### API 3: Get Product by ID
 
-#### **Endpoint**: `/product/{pid}`
+ **Endpoint**: `/product/{pid}`
 
-#### **Method**: `GET`
+ **Method**: `GET`
 
-#### **Description**: Fetches details of a product based on the product ID (`pid`). If the product is not found, returns `404 Not Found`.
+ **Description**: Fetches details of a product based on the product ID (`pid`). If the product is not found, returns `404 Not Found`.
 
-#### **Response**:
+ **Response**:
 
 ```json
 {
@@ -145,13 +145,13 @@ If the `pid` is not found:
 
 ### API 4: Update a Product
 
-#### **Endpoint**: `/update/{pid}`
+ **Endpoint**: `/update/{pid}`
 
-#### **Method**: `PUT`
+ **Method**: `PUT`
 
-#### **Description**: Updates an existing product based on the provided `pid`. If the product is not found, returns `404 Not Found`.
+ **Description**: Updates an existing product based on the provided `pid`. If the product is not found, returns `404 Not Found`.
 
-#### **Request**:
+ **Request**:
 
 ```json
 {
@@ -159,7 +159,7 @@ If the `pid` is not found:
 }
 ```
 
-#### **Response**:
+ **Response**:
 
 ```json
 {
@@ -180,13 +180,13 @@ If the `pid` is not found:
 
 ### API 5: Delete a Product
 
-#### **Endpoint**: `/delete/{pid}`
+ **Endpoint**: `/delete/{pid}`
 
-#### **Method**: `DELETE`
+ **Method**: `DELETE`
 
-#### **Description**: Deletes a product based on the `pid`. If the product is not found, returns `404 Not Found`.
+ **Description**: Deletes a product based on the `pid`. If the product is not found, returns `404 Not Found`.
 
-#### **Response**:
+ **Response**:
 
 ```json
 {
