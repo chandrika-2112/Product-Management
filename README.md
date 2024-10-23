@@ -1,9 +1,3 @@
-# Product Management
-
-Here’s the `README.md` file tailored to your **Product Management System** project:
-
----
-
 # Product Management System
 
 This is a **Spring Boot** application that provides a RESTful API for managing products. It uses **MySQL** as the database, and **Postman** can be used to test the API endpoints. The system allows users to create, update, delete, and fetch product details.
@@ -46,7 +40,7 @@ The following APIs are available in this system:
 
 ### API 1: Get All Products
 
-#### **Endpoint**: `/products`
+#### **Endpoint**: `/allProducts`
 
 #### **Method**: `GET`
 
@@ -57,29 +51,17 @@ The following APIs are available in this system:
 ```json
 [
     {
-        "pid": 1,
-        "name": "Laptop",
-        "image": "laptop.png",
-        "costPrice": 50000,
-        "quantity": 10,
-        "origin": "India",
-        "profit": 5000.0,
-        "sellPrice": 55000,
-        "gst": 18.0,
-        "amount": 64900
+        "pid": 101,
+        "name": "Samsung Galaxy S24",
+        "image": "https://th.bing.com/th/id/OIP.O6Q0e4UmP3pfw-ovYg4k_QAAAA?w=181&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+        "costPrice": 66000,
+        "quantity": 2,
+        "origin": "South Korea",
+        "profit": 9900.0,
+        "sellPrice": 75900,
+        "gst": 13662.0,
+        "amount": 151800
     },
-    {
-        "pid": 2,
-        "name": "Mobile",
-        "image": "mobile.png",
-        "costPrice": 30000,
-        "quantity": 20,
-        "origin": "China",
-        "profit": 3000.0,
-        "sellPrice": 33000,
-        "gst": 18.0,
-        "amount": 38940
-    }
 ]
 ```
 
@@ -87,7 +69,7 @@ The following APIs are available in this system:
 
 ### API 2: Create a New Product
 
-#### **Endpoint**: `/products`
+#### **Endpoint**: `/save`
 
 #### **Method**: `POST`
 
@@ -97,15 +79,12 @@ The following APIs are available in this system:
 
 ```json
 {
-    "name": "Tablet",
-    "image": "tablet.png",
-    "costPrice": 25000,
-    "quantity": 15,
-    "origin": "USA",
-    "profit": 2000.0,
-    "sellPrice": 27000,
-    "gst": 18.0,
-    "amount": 31860
+   "pid": 103,
+    "name": "Apple ipad pro 11",
+    "image": "https://www.apple.com/newsroom/images/product/ipad/standard/apple_ipad-pro-spring21_hero_04202021_big.jpg.large.jpg",
+    "costPrice": 96000,
+    "quantity": 1,
+    "origin": "China",
 }
 ```
 
@@ -113,16 +92,16 @@ The following APIs are available in this system:
 
 ```json
 {
-    "pid": 6,
-    "name": "Tablet",
-    "image": "tablet.png",
-    "costPrice": 25000,
-    "quantity": 15,
-    "origin": "USA",
-    "profit": 2000.0,
-    "sellPrice": 27000,
-    "gst": 18.0,
-    "amount": 31860
+    "pid": 103,
+    "name": "Apple ipad pro 11",
+    "image": "https://www.apple.com/newsroom/images/product/ipad/standard/apple_ipad-pro-spring21_hero_04202021_big.jpg.large.jpg",
+    "costPrice": 96000,
+    "quantity": 1,
+    "origin": "China",
+    "profit": 14400.0,
+    "sellPrice": 110400,
+    "gst": 19872.0,
+    "amount": 130272
 }
 ```
 
@@ -130,7 +109,7 @@ The following APIs are available in this system:
 
 ### API 3: Get Product by ID
 
-#### **Endpoint**: `/products/{pid}`
+#### **Endpoint**: `/product/{pid}`
 
 #### **Method**: `GET`
 
@@ -140,16 +119,16 @@ The following APIs are available in this system:
 
 ```json
 {
-    "pid": 3,
-    "name": "Smartwatch",
-    "image": "smartwatch.png",
-    "costPrice": 10000,
-    "quantity": 30,
-    "origin": "Japan",
-    "profit": 1500.0,
-    "sellPrice": 11500,
-    "gst": 18.0,
-    "amount": 13570
+    "pid": 105,
+    "name": "iPhone 16 pro",
+    "image": "https://th.bing.com/th/id/OIP.WJgG0-v1zkdtxP0L07G_BgHaJP?w=133&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
+    "costPrice": 127000,
+    "quantity": 1,
+    "origin": "United State",
+    "profit": 19050.0,
+    "sellPrice": 146050,
+    "gst": 26289.0,
+    "amount": 172339
 }
 ```
 
@@ -158,7 +137,7 @@ If the `pid` is not found:
 ```json
 {
     "status": 404,
-    "message": "Product not found"
+    "message": "Product doesn't exist"
 }
 ```
 
@@ -166,7 +145,7 @@ If the `pid` is not found:
 
 ### API 4: Update a Product
 
-#### **Endpoint**: `/products/{pid}`
+#### **Endpoint**: `/update/{pid}`
 
 #### **Method**: `PUT`
 
@@ -176,8 +155,7 @@ If the `pid` is not found:
 
 ```json
 {
-    "sellPrice": 58000,
-    "status": "IN STOCK"
+    "quantity": 2,
 }
 ```
 
@@ -185,16 +163,16 @@ If the `pid` is not found:
 
 ```json
 {
-    "pid": 1,
-    "name": "Laptop",
-    "image": "laptop.png",
-    "costPrice": 50000,
-    "quantity": 10,
-    "origin": "India",
-    "profit": 8000.0,
-    "sellPrice": 58000,
-    "gst": 18.0,
-    "amount": 68440
+    "pid": 103,
+    "name": "Apple ipad pro 11",
+    "image": "https://www.apple.com/newsroom/images/product/ipad/standard/apple_ipad-pro-spring21_hero_04202021_big.jpg.large.jpg",
+    "costPrice": 96000,
+    "quantity": 2,
+    "origin": "China",
+    "profit": 14400.001,
+    "sellPrice": 110400,
+    "gst": 19872.0,
+    "amount": 260544
 }
 ```
 
@@ -202,7 +180,7 @@ If the `pid` is not found:
 
 ### API 5: Delete a Product
 
-#### **Endpoint**: `/products/{pid}`
+#### **Endpoint**: `/delete/{pid}`
 
 #### **Method**: `DELETE`
 
@@ -221,7 +199,7 @@ If the `pid` is not found:
 ```json
 {
     "status": 404,
-    "message": "Product not found"
+    "message": "Product doesn't exist"
 }
 ```
 
@@ -258,4 +236,5 @@ spring.jpa.show-sql=true
 
 ---
 
-Let me know if you need further changes!
+## Note:
+Refer to the **Product-Management-Using-ReactJs** repository, where I have implemented the same operations using **ReactJS**, integrated with **Spring Boot** and **MySQL**.
