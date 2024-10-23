@@ -40,7 +40,7 @@ The following APIs are available in this system:
 
 ### API 1: Get All Products
 
-#### **Endpoint**: `/allProducts`
+ **Endpoint**: `/allProducts`
 
 #### **Method**: `GET`
 
