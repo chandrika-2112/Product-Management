@@ -240,7 +240,7 @@ spring.jpa.show-sql=true
    ```
 3. Start the React app:
    ```bash
-   npm run dev
+   npm start
    ```
 
 ### Database (MySQL)
