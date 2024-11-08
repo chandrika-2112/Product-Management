@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+fieldset {
+    border: 2px solid #a8aaab; 
+    padding: 20px; 
+    border-radius: 8px; 
+    margin-bottom: 30px;
+    margin: 20px 0; 
+    width: 30%; 
+    background-color: #f9f9f9; 
+}
+
+legend {
+    font-size: 1.5rem;
+    color: #6d6e70; 
+    font-weight: 100; 
+    padding: 0 10px; 
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%; 
+    padding: 10px; 
+    background-color: white;
+    margin-bottom: 10px; 
+    border: 2px solid #a19e9e; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    font-size: 1rem;
+}
+
+/* Button styling */
+.button {
+    background-color: #489cf6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
